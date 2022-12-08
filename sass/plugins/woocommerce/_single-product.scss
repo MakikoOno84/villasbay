@@ -1,0 +1,222 @@
+.single-product {
+
+	div.product {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+			float: left;
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 2em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+// custom styling
+.single-product .related .price,
+.single-product .related h2,
+.single-product .tabs,
+.single-product .entry-summary .product_meta {
+    display: none;
+}
+.postid-73 .woocommerce-tabs .woocommerce-Tabs-panel--reviews,
+.single-product .entry-summary .woocommerce-tabs {
+	display: none !important;
+}
+
+// Remove blank space on top of page: begin
+.product_title.entry-title {
+	margin-top:0;
+	letter-spacing: 3px;
+}
+.summary.entry-summary {
+	margin-top: 0;
+}
+.woocommerce-product-gallery__wrapper {
+	margin-top: 0;
+}
+// Remove blank space on top of page: end
+// styling for accomdation single stay
+.product_cat-stay .entry-summary {
+	padding: 1rem;
+}
+.product_cat-stay .product-content,
+.product_cat-stay .cta-giftcard,
+.product_cat-stay .testimonial,
+.related-products {
+	padding: 1rem;
+	text-align: center;
+} 
+.product_cat-stay .product-content {
+	@include text-box-shadow;
+	margin-bottom: 2rem;
+}
+.related-villas {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.related-villas h4 {
+	border-bottom: 1px black solid;
+	width: 75%;
+	margin: 0 auto;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+	text-transform: uppercase;
+}
+.related-products h3,
+.testimonial h3,
+.product_title {
+	text-transform: uppercase;
+}
+.product_cat-stay .woocommerce-product-gallery__image::after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background-color: rgba(0,0,0,0.3); 
+    z-index: 1;
+}
+.single-product .single_add_to_cart_button {
+	border: 1px $tide solid;
+	background-color: $tide;
+	color: $white;
+	text-transform: uppercase;
+	padding: 1rem;
+}
+.product .woocommerce-product-gallery__image {
+	display: block;
+}
+.product .each-faq {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.product_cat-stay .icon-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.product #entry-header .woocommerce-product-gallery__image img {
+	display: block;
+	object-fit: cover;
+	max-height: 75vh;
+}
+
+@media(min-width: 645px) {
+	.room-images {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-around;
+		padding: 2rem 1rem;
+	}
+	.room-images img {
+		width: 45%;
+	}
+}
+@media (min-width: 768px) {
+	.product_cat-stay .entry-summary {
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 600px) minmax(0, 600px) 1fr;
+		column-gap: 2rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	.product_cat-stay .cart {
+		grid-column: 3/4;
+		grid-row: 1/4;
+	}
+	
+	.product_cat-stay .product-content {
+		grid-column: 2/3;
+		text-align: left;
+	}
+
+	.related-products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.related-products h3 {
+		width: 100%;
+	}
+	.related-villas {
+		width: 30%;
+	}
+	.product #entry-header .woocommerce-product-gallery__image img {
+		width: 100%;
+	}
+}

@@ -1,0 +1,24 @@
+.sticky {
+	display: block;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.page-content-wrapper {
+	margin-bottom: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}

@@ -1,0 +1,40 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: $font__mobile_heading_other;
+	clear: both;
+	font-family: $font__heading;
+}
+h1 {
+	font-family: $font__heading;
+	font-size: $font__mobile_heading_one;
+}
+
+// use for fake h1
+.h1 {
+	font-family: $font__heading;
+	font-size: $font__mobile_heading_one;
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	font-size: $font__desktop_heading_other;
+	};
+	
+	h1 {
+	font-size: $font__desktop_heading_one;
+	}
+
+	.h1 {
+		font-size: $font__desktop_heading_one;
+	}
+	
+}

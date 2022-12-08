@@ -1,0 +1,35 @@
+
+.page-id-33 ol {
+    margin-left: 0;
+   
+}
+
+.description_about  {
+    width: 80%;
+    margin: auto;
+    line-height: 3rem;
+}
+@media (min-width:1000px) {
+    .swiper,
+    .description_about  {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .swiper {
+        width: 50%;
+    }
+    .description_about {
+        padding-left: 2rem;
+        width: 40%;
+    
+        p {
+            padding-top: 1rem;
+        }
+    }    
+}
+
+.about-direction {
+    width: 80%;
+    margin: auto;
+    line-height: 2rem;
+}

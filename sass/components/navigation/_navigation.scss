@@ -1,0 +1,305 @@
+.main-navigation {
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	text-align: center;
+	li {
+		margin-bottom: 1rem;
+	}
+}
+
+
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+// Logo
+.site-branding {
+	width: fit-content;
+	margin: 0 auto;
+}
+.menu-toggle {
+	// Reset default button style
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+svg {
+	width: 40px;
+
+}}
+.custom-logo-link {
+	img {
+		width: 100px;
+	}
+}
+.header-left,
+.header-right {
+	display: none;
+}
+#currency_converter {
+	color: $white;
+	font-size: 1rem;
+	.wc-currency-converter-reset {
+		color: $white;
+	}
+}
+.menu-logo {
+	display: none;
+	a {
+		// background-size: 100%;
+		background-repeat: no-repeat;
+		width: 120px;
+		height: 120px;
+		background-size: 120px 120px;
+		/* Hide the text. */
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+.header-left,
+.header-right {
+		a {
+	text-decoration: none;
+	color: $white;
+	font-size: $font__desktop_header_button;
+		}
+}
+
+.header-right .booknow-button {
+	a {
+		background-color: transparent;
+		border-style: solid;
+		border-width: 1px;
+		padding: .5rem 1rem;
+		text-transform: uppercase;
+		display: block;
+	}
+}
+
+.menu-header-menu-container ul {
+	background-color: $white;
+}
+// cart styling
+.header-left .cart-contents .amount,
+.header-left .woocommerce-mini-cart__empty-message {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.menu-header-menu-container ul {
+		background-color: transparent;
+	}
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+		justify-content: space-evenly;
+		align-items:flex-end ;
+	}
+
+	.menu-logo {
+		display: initial;
+	}
+	.site-branding {
+		display: none;
+	}
+	.page-id-24,
+	.page-id-101,
+	.page-id-144,
+	.single-vb-experience,
+	.page-id-33,
+	.page-id-21,
+	.page-id-41,
+	.page-id-202,
+	.page-id-3,
+	.single-product {
+		.header-left,
+		.header-right {
+		display: initial;
+		}
+	}
+
+	// default header layout 
+	.custom-page-header {
+		font-size: $font__desktop_header_nav;
+		display: grid;
+		grid-template-columns: 1fr 8fr 1fr;
+		.main-navigation {
+			grid-column: 2 / 3;
+		}
+	
+	}
+
+	// header layout with left and right content
+	.page-id-24,
+	.page-id-101,
+	.page-id-144,
+	.single-vb-experience,
+	.page-id-33,
+	.page-id-21,
+	.page-id-41,
+	.page-id-202,
+	.page-id-3,
+	.single-product {
+		.custom-page-header {
+			display: grid;
+			grid-template-columns: 1fr 180px minmax(0,1000px) 180px 1fr;
+			.header-left {
+				grid-column: 2 / 3;
+				justify-self: center;
+				align-self: center;
+			}
+			.main-navigation {
+				grid-column: 3 / 4;
+			}
+			.header-right {
+				grid-column: 4 / 5;
+				justify-self: center;
+				align-self: center;
+			}
+			
+		}
+	}
+
+	// header color on page with banner
+    .page-id-24,
+    .page-id-101,
+    .page-id-144,
+    .single-vb-experience,
+    .page-id-33,
+    .page-id-21,
+    .page-id-41,
+    .page-id-202,
+    .page-id-3,
+	.single-product
+	{
+		.custom-page-header {
+			@include color-transparent-page-header;
+			&:hover {
+				@include color-white-page-header;
+			}
+			&.scrollDown {
+				@include color-white-page-header;
+				box-shadow: 2px 2px 4px lightgray;
+			}
+		}
+	}
+
+
+}
+
+
+// Site Header
+.site-header {
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	ul {
+		list-style: none;
+	}
+}
+
+

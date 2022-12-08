@@ -1,0 +1,31 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-size: $font__mobile_body;
+	line-height: $font__line-height-body;
+	letter-spacing: 1px;
+}
+
+.entry-title {
+	text-transform: uppercase;
+}
+
+@import "headings";
+@import "copy";
+
+
+@media (min-width: 768px) {
+	body,
+	button,
+	input,
+	select,
+	optgroup,
+	textarea {
+		font-size: $font__desktop_body;
+	}
+}

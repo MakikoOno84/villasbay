@@ -1,0 +1,134 @@
+#exp-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-top: 1px solid $black;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid $black;
+    padding-bottom: 1.5rem;
+}
+
+#exp-btn-container > button {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    text-align: center;
+}
+#exp-btn-container > button:hover {
+    background-color: $black;
+    color: $white;
+    transition: background-color .3s ease-in;
+}
+#exp-btn-container > button:focus,
+#exp-btn-container > button:active {
+    background-color: $black;
+    color: $white;
+}
+
+.exp-container {
+    padding: 1rem;
+    justify-items: center;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    a {
+    text-decoration: none;
+    }
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $black;
+        letter-spacing: 3px;
+        margin-top: 2rem;
+        border-bottom: 1px $black solid;
+        padding-bottom: 1rem;
+    }
+    h2:visited {
+        color: $black;
+    }
+}
+
+
+.exp {
+    padding: 1rem 0;
+    margin: 2rem auto;
+    img{
+        width: auto;
+        height: 20rem;
+        object-fit: cover;
+        display: block;
+    }
+}
+// single experience page starts here
+.single-experience {
+    padding: 1rem;
+}
+.exp-gallery {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(5vh + 5px) calc(5vw + 5px);
+    margin: 2rem;
+
+    img {
+        object-fit: contain;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+.single-experience-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.exp-nav {
+   max-width: 80%;
+   margin: auto;
+   padding-bottom: 2rem;
+}
+
+.exp-nav .nav-links a,
+.exp-nav .nav-links a:visited {
+    text-decoration: none;
+    color: $black;
+    padding-bottom: .5rem;
+}
+.exp-nav .nav-links .nav-previous:after,
+.exp-nav .nav-links .nav-next:after {
+    display: block;
+    content: '';
+    background: $black;
+    height: 2px;
+    width: 0;
+    transition: width .4s ease-in-out;
+}
+.exp-nav .nav-links .nav-previous:hover:after,
+.exp-nav .nav-links .nav-next:hover:after {
+    width: 100%;
+    transition: width .4s ease-in-out;
+}
+
+@media (min-width:500px) {
+    .exp-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        justify-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .exp-container {
+        grid-template-columns: repeat(3, minmax(0, 325px));
+        column-gap: 2rem;
+    }
+    .exp {
+        img {
+            height: 25rem;
+        }
+    }
+}

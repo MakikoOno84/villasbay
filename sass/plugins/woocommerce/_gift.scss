@@ -1,0 +1,51 @@
+// .postid-73 .woocommerce-product-gallery {
+
+//     position: relative;
+//     float: none;
+// }
+// .postid-73 .summary.entry-summary{
+//     // top:    1rem;
+//     border-style: solid;
+//     position: relative;
+//     margin-top: 2rem;
+// }
+
+.single-product div.product .woocommerce-product-gallery {
+    position: relative;
+    float: none!important;
+   
+}
+
+.product_cat-gift-card .summary {
+    padding: 1rem 1rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 400px) 1fr;
+    border-style: solid;
+    width: 60%;
+    border-width: 2px;
+}
+
+.product_cat-gift-card .cart,
+.product_cat-gift-card #call_for_credit,
+.product_cat-gift-card .product-content {
+    grid-column: 2/3;
+    justify-self: center;
+} 
+
+.product_cat-gift-card .summary .wc-sc-row,
+.product_cat-gift-card .summary .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+.product_cat-gift-card .product-content h1 {
+    border-bottom: 1px solid $black;
+    padding-bottom: .5rem;
+}
+.product_cat-gift-card .summary .cart {
+    border-bottom: 1px solid $black;
+    padding-bottom: 1.5rem;
+}

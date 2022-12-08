@@ -1,0 +1,80 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+// align items in the center with flex
+@mixin align-item-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// A Tag Button
+@mixin fake-button {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: .5rem 1.5rem;
+	width: fit-content;
+	text-transform: uppercase;
+}
+
+// Header Style
+
+/* Default header color
+background	: white
+font color	: black
+*/
+@mixin color-white-page-header {
+	background-color: $color__background-header;
+	a{
+		color: $color__text-main;
+		}
+	.booknow-button {
+		a {
+			background-color: $black;
+			color: $white;
+			border: none;
+		}
+	}
+	#currency_converter {
+		color: $black;
+		.wc-currency-converter-reset {
+			color: $black;
+		}
+	}
+	.main-navigation li {
+		margin-bottom: 0.8rem;
+	}
+	transition: background-color 0.4s ease-out;
+}
+
+/* Transparent header color
+background	: transparent
+font color	: white
+*/
+@mixin color-transparent-page-header {
+	background-color: transparent;
+	transition: background-color 1s 0s ease;
+	a {
+		color: $color__text-banner;
+	}
+	.main-navigation li {
+		margin-bottom: 0.8rem;
+	}
+}
+
+// drop shadow for texts boxes
+@mixin text-box-shadow {
+	border-radius: 3px;
+	background: #f0f0f0;
+	box-shadow:  20px 20px 30px #cccccc,
+             	-20px -20px 30px #ffffff;
+}

@@ -1,0 +1,68 @@
+.cta-giftcard {
+    padding: 1rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.cta-giftcard h2 {
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+    .cta-giftcard {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
+    
+    .cta-giftcard-image {
+        position: relative;
+        width: fit-content;
+        justify-self: center;
+    }
+    .cta-giftcard-text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        max-height: 500px;
+        max-width: 800px;
+        text-align: center;
+        align-self: center;
+        background-color:#f1d0bd;
+
+        z-index: 20;
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .cta-giftcard img {
+        position: relative;
+        object-fit: cover;
+        width: 100vw;
+    }
+
+    .cta-giftcard-text {
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        color: $black;
+        z-index: 2;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 3px;
+        background: #f1d0bd;
+        box-shadow:  18px 18px 40px #d9bbaa;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .cta-giftcard {
+        margin-top: 3rem;
+        padding-top: 3rem; 
+    }
+}

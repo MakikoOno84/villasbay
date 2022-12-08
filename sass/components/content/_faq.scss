@@ -1,0 +1,82 @@
+// beginning of FAQ page -------------------------------------
+
+/* accordion  */
+.faq-accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 13px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    transition: 0.4s;
+  }
+  .faq-accordion h3{
+    text-align: left;
+    margin: 1.1rem 0.2rem 0.2rem 0.2rem;    
+    font-size: 1rem;
+    padding-right: 0.5rem;
+  }
+  
+  .toggle-open, .fag-accordion {
+    background-color: #8fbcde; 
+     
+
+  }
+  .faq-accordion:hover{
+    background-color: #7a9cb3;
+
+  }
+  
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+  .accordionWrapper{
+ 
+    background:#fff;
+    width:80%;
+    box-sizing:border-box;
+    margin:10%;
+    margin-top: 5rem;
+    box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+
+  }
+
+    .faq-accordion:after {
+      content: '\02795'; /* Unicode character for "plus" sign (+) */
+      color: #777;
+      // float: right;
+      margin-left: 5px;
+      top: -17px;
+      position: relative;
+    }
+    .each-faq{
+      // border-style:solid;
+      // padding: 0.2rem;
+      border: 1px solid #ddd;
+      margin: 0.2rem;
+
+
+    }
+    
+    .toggle-open:after {
+      content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    // end of FAQ page -------------------------------------
+@media (min-width: 768px) {
+  .page-id-41 .post-thumbnail > img,
+  .page-id-3 .post-thumbnail > img,
+  .page-id-202 .post-thumbnail > img {
+    object-position: bottom !important;
+  }
+}
+
+   
+
+

@@ -1,0 +1,59 @@
+.cta-experience {
+    position: relative;
+    margin: 2rem auto;
+}
+
+.cta-experience h2 {
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .cta-experience {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
+    
+    .cta-experience-image {
+        position: relative;
+        width: fit-content;
+        justify-self: center;
+    }
+    .experience-content {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        max-height: 500px;
+        max-width: 600px;
+        text-align: center;
+        align-self: center;
+        background-color:#c3d8de;
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .cta-experience img {
+        position: relative;
+        object-fit: cover;
+        width: 100vw;
+    }
+
+    .experience-content {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        color: $black;
+        z-index: 2;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 3px;
+        background: #c3d8de;
+        box-shadow:  18px 18px 40px #b0c2c8;
+    }
+
+}

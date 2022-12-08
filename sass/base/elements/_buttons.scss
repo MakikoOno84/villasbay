@@ -1,0 +1,89 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+// changing your A Tags to buttons
+.outline-btn {
+	@include fake-button;
+	border: 1px solid;
+	letter-spacing: 4px;
+}
+
+a.outline-btn {
+	color: $black;
+}
+
+a.outline-btn:visited {
+	color: $black;
+}
+
+.filled-btn {
+	@include fake-button;
+	border: 1px solid;
+}
+
+a.white-filled {
+	color: $black;
+}
+
+a.white-filled:visited {
+	color: $black;
+}
+
+a.black-filled {
+	color: $white;
+}
+
+a.black-filled:visited {
+	color: $white;
+}
+// Different color style of outlines
+
+.white-outline {
+	border-color: $white;
+}
+
+.black-outline {
+	border-color: $black;
+}
+
+.white-filled {
+	border-color: $white;
+	background-color: $white;
+}
+
+.black-filled {
+	border-color: $black;
+	background-color: $black;
+}
+
+// hover state
+.outline-btn.black-outline:hover {
+	background-color: $black;
+	color: $white;
+	transition: background-color .3s ease-in;
+}
+
+.white-outline:hover {
+	background-color: $white;
+	color: $black;
+	transition: background-color .3s ease-in;
+}

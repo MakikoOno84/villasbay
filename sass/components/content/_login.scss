@@ -1,0 +1,92 @@
+#post-15 {
+    margin: 3rem auto;
+    padding: 1rem;
+    min-height: 70vh;
+}
+
+#post-15 .entry-header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#post-15 .u-column1{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#post-15 .u-column2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#post-15 .woocommerce-button {
+    display: block;
+    margin-top: .5rem;
+    border: 1px $tide solid;
+	background-color: $tide;
+	color: $white;
+	text-transform: uppercase;
+	padding: 1rem;
+}
+
+#post-15 .password-input {
+    display: block;
+    margin-top: .5rem;
+}
+
+// after log in
+#post-15 .woocommerce {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#post-15 .woocommerce .woocommerce-MyAccount-navigation > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: .5rem;
+    background-color: rgb(226, 226, 226);
+}
+
+#post-15 .woocommerce .woocommerce-MyAccount-navigation ul li > a,
+#post-15 .woocommerce .woocommerce-MyAccount-navigation ul li > a:visited {
+    text-transform: uppercase;
+    color: $black;
+    text-decoration: none;
+}
+
+#post-15 .woocommerce .woocommerce-MyAccount-navigation ul > li {
+    border: 1px solid $black;
+    padding: .5rem;
+    margin: 1rem 0;
+    width: fit-content;
+}
+
+#post-15 .entry-footer {
+    display: none;
+}
+#post-15 .woocommerce-MyAccount-content {
+    min-height: 30vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#post-15 .woocommerce-MyAccount-content p > strong {
+    font-size: 1.15rem;
+    color: $sunset;
+    text-transform: uppercase;
+}
+@media (min-width: 768px) {
+    #post-15 .woocommerce .col2-set {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(0, 400px)) 1fr;
+    }
+    #post-15 .u-column1{
+        grid-column: 2/3;
+    }
+    #post-15 .u-column2{
+        grid-column: 3/4;
+    }
+}

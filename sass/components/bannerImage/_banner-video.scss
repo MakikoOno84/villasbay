@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    // .entry-title.banner-title.welcome {
+    //     display: none;
+    // }
+    // .entry-title.banner-title.welcome.active {
+    //     display: initial;
+    //     /* animation */
+    //     animation-name:fadeUpAnime;
+    //     animation-delay: 0.4s;
+    //     animation-duration:1s;
+    //     animation-fill-mode:forwards;
+    //     opacity:0;
+    // } 
+
+    .page-id-24 .hero-text {
+        display: none;
+        top:70%;
+        p {
+            margin-bottom: 1rem;
+        }
+        a {
+            color: $white;
+            border-color: $white;
+        }
+    }
+    .page-id-24 .hero-text.active {
+        display: initial;
+        /* animation */
+        animation-name:fadeUpAnime;
+        animation-delay: 0.4s;
+        animation-duration:1s;
+        animation-fill-mode:forwards;
+        opacity:0;
+    }       
+
+    @keyframes fadeUpAnime{
+    from {
+        opacity: 0.3;
+        transform: translate(-50%,-30%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+    }
+
+    .welcome-video {
+        // min-height: 100vh;
+    }
+
+
+
+}

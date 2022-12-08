@@ -1,0 +1,74 @@
+.site {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 2160px) 1fr;
+    grid-template-areas: 
+    " . header . "
+    " . main . "
+    " . footer . ";
+};
+
+.site-header {
+    grid-area: header;
+};
+
+.site-main {
+    grid-area: main;
+};
+
+.site-footer {
+    grid-area: footer;
+};
+
+// Front Page layout for desktop
+@media (min-width:768px) {
+    .site-main {
+        // need for header space for page witout banner image
+        // margin-top: 106px;
+    };
+	.page-id-24,
+	.page-id-101,
+	.page-id-144,
+	.single-vb-experience,
+	.page-id-33,
+	.page-id-21,
+	.page-id-41,
+	.page-id-202,
+	.page-id-3,
+	.single-product {
+        .site-main {
+            margin-top:0;
+        }
+    }
+}
+
+// .site-wrapper {
+//     padding: 0 3rem 2rem 3rem;
+// }
+
+@media (min-width: 800px) {
+    .site-wrapper {
+        padding: 3rem 3rem;
+    }
+
+    // Place header over banner image
+    .page-id-24,
+    .page-id-101,
+    .page-id-144,
+    .single-vb-experience,
+    .page-id-33,
+    .page-id-21,
+    .page-id-41,
+    .page-id-202,
+    .page-id-3,
+    .single-product
+     {
+        // .custom-page-header {
+        .site-header    {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            right: 0;
+        }
+    }
+}
